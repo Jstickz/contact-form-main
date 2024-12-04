@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="favicon-32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header></header>
+
+    <main class="main">
+      <h1>Contact Us</h1>
+      <form action="submit" class="form" novalidate>
+        <div class="fullName">
+          <fieldset>
+            <legend>First Name</legend>
+            <label for="name" class="name"
+              >First Name <span class="asteris">*</span></label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              aria-labelledby="name"
+              required
+            />
+            <span class="errorMsg" id="nameError">This field is required</span>
+          </fieldset>
+
+          <fieldset>
+            <legend>Last Name</legend>
+            <label for="lastName" class="lastName"
+              >Last Name <span class="asteris">*</span></label
+            >
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              autocomplete="lastName"
+              aria-labelledby="lastName"
+              required
+            />
+            <span class="errorMsg" id="surnameError"
+              >This field is required</span
+            >
+          </fieldset>
+        </div>
+
+        <fieldset>
+          <legend>Email</legend>
+          <label for="email" class="email"
+            >Email <span class="asteris">*</span></label
+          >
+          <input type="email" id="email" autocomplete="email" required />
+          <span class="errorMsg" id="emailError">This field is required</span>
+        </fieldset>
+
+        <div class="queryType-container">
+          <label>Query Type <span class="asteris">*</span></label>
+          <fieldset>
+            <div class="radio-btn">
+              <input
+                type="radio"
+                name="queryType"
+                id="generalEnquiry"
+                value="generalEnquiry"
+                tabindex="0"
+                class="query-type"
+              />
+              <label for="generalEnquiry">General Enquiry</label>
+            </div>
+
+            <div class="radio-btn">
+              <input
+                type="radio"
+                name="queryType"
+                id="supportRequest"
+                value="supportRequest"
+                tabindex="1"
+                class="query-type"
+              />
+              <label for="supportRequest">Support Request</label>
+            </div>
+          </fieldset>
+          <span class="errorMsg" id="queryType-error"
+            >Please select a query type</span
+          >
+        </div>
+
+        <fieldset>
+          <legend>Message</legend>
+          <label for="message">Message <span class="asteris">*</span></label>
+          <textarea name="message" id="message" required></textarea>
+          <span class="errorMsg" id="messageError">This field is required</span>
+        </fieldset>
+
+        <fieldset>
+          <input
+            type="checkbox"
+            id="concent"
+            aria-labelledby="To submit this form, please consent to being contacted"
+            required
+          />
+          <label for="concent">
+            I consent to being contacted by the team
+            <span class="asteris">*</span>
+          </label>
+          <span class="errorMsg" id="concentError"
+            >To submit this form, please consent to being contacted</span
+          >
+        </fieldset>
+
+        <button class="submit" id="submit" type="submit">Submit</button>
+      </form>
+
+      <section class="successMsg">
+        <div class="success">
+          <div>
+            <img
+              src="./assets/images/icon-success-check.svg"
+              alt="success-icon"
+            />
+            <p>Message Sent!</p>
+          </div>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script defer src="./app.js"></script>
+  </body>
+</html>
